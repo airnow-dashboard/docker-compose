@@ -80,7 +80,7 @@ with DAG(
         auto_remove="force",
         mounts=[shared_volume],
         command=[output_target, "historical"],
-        network_mode="host",
+        network_mode="bridge",
         environment=piper_env_vars
     )
 
