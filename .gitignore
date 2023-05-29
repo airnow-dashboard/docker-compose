@@ -1,3 +1,5 @@
 .idea/
-logs/
-plugins/
+logs/**
+plugins/**
+!logs/README.md
+!plugins/README.md
