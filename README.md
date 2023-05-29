@@ -17,7 +17,8 @@ Integration with external APIs
 Before using the AirNow Dashboard system, make sure you have the following prerequisites installed on your system:
 
 Docker Engine/Desktop: [Installation Guide](https://docs.docker.com/get-docker/)
-Docker Compose is included in the latest version of Docker Engine/Desktop, so no additional installation is needed!
+
+*Note: Docker Compose is included in the latest version of Docker Engine/Desktop, so no additional installation is needed!*
 
 ## Getting Started
 
