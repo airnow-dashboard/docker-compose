@@ -10,7 +10,7 @@ Welcome to the `airnow-dashboard/docker-compose` repository! This repository hos
 
 ## Features
 - Speedy Historical/Current data collection (`airnow-scraper` + `piper`)
-- Scheduled current data collection every (Apache Airflow)
+- Scheduled auto-update pipeline every 4 hours (Apache Airflow)
 - Widely supported database for connection to external services (PostgreSQL)
 
 ## Prerequisites
