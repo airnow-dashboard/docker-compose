@@ -13,10 +13,10 @@ from docker.types import Mount
 output_target = "/app/output"
 
 piper_env_vars = {
-    "AIRNOW_DB_HOST": environ.get("AIRNOW_DB_HOST"),
-    "AIRNOW_DB_NAME": environ.get("AIRNOW_DB_NAME"),
-    "AIRNOW_DB_USER": environ.get("AIRNOW_DB_USER"),
-    "AIRNOW_DB_PASSWORD": environ.get("AIRNOW_DB_PASSWORD"),
+    "AIRNOW_DB_HOST": environ.get("postgres-airnow"),
+    "AIRNOW_DB_NAME": environ.get("airnow"),
+    "AIRNOW_DB_USER": environ.get("airnow_admin"),
+    "AIRNOW_DB_PASSWORD": environ.get("ClwroyfOolkmotaAUJsv0nd0r5elWfHtRof7C3lYdzwr1FjmxzsrBGy"),
 }
 
 shared_volume = Mount(
