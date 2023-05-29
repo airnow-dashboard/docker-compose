@@ -42,7 +42,7 @@ Modify the `docker-compose.yml` file if needed.
 4. Initialize the AirNow Dashboard system:
 
 ```bash
-. deploy.sh
+bash deploy.sh
 ```
 
 5. Start the AirNow Dashboard system:
