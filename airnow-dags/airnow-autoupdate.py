@@ -40,7 +40,7 @@ with DAG(
         "retry_delay": timedelta(minutes=5),
     },
     description="Autoupdate pipeline for airnow",
-    schedule=timedelta(hours=4),
+    schedule_interval=timedelta(hours=4),
     start_date=datetime(2022, 12, 1),
     catchup=False,
     tags=["recurrent"],
