@@ -1,7 +1,7 @@
 -- CREATE USER airnow_admin WITH PASSWORD 'jw8s0F4';
 
-CREATE USER airnow_admin WITH PASSWORD 'ClwroyfOolkmotaAUJsv0nd0r5elWfHtRof7C3lYdzwr1FjmxzsrBGyASQvzXa0FFwqVQsvr35aDTou7XXxYpyzvibWBkLrpeiIC';
-CREATE DATABASE airnow;
+-- CREATE USER airnow_admin WITH PASSWORD 'ClwroyfOolkmotaAUJsv0nd0r5elWfHtRof7C3lYdzwr1FjmxzsrBGyASQvzXa0FFwqVQsvr35aDTou7XXxYpyzvibWBkLrpeiIC';
+-- CREATE DATABASE airnow;
 CREATE TABLE [IF NOT EXISTS] pm25_measurements (
     datetime timestamp not null
     location varchar(100) not null

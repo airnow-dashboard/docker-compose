@@ -78,7 +78,7 @@ services:
       POSTGRES_DB: airnow
     volumes:
       - postgres-airnow-db-volume:/var/lib/postgresql/data
-      - ${PROJECTDIR}/postgres-airnow-init.sql:/docker-entrypoint-initdb.d/1-schema.sql
+      - $PWD/postgres-airnow-init.sql:/docker-entrypoint-initdb.d/1-schema.sql
     healthcheck:
       test: ["CMD", "pg_isready", "-U", "airnow_admin", "-d", "airnow"]
       interval: 5s
