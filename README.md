@@ -1,17 +1,17 @@
-# airnow-dashboard
+# docker-compose
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![GitHub Stars](https://img.shields.io/github/stars/airnow-dashboard/docker-compose.svg)](https://github.com/airnow-dashboard/docker-compose/stargazers)
 [![GitHub Issues](https://img.shields.io/github/issues/airnow-dashboard/docker-compose.svg)](https://github.com/airnow-dashboard/docker-compose/issues)
 [![Contributions welcome](https://img.shields.io/badge/Contributions-welcome-orange.svg)](https://github.com/airnow-dashboard/docker-compose/blob/master/CONTRIBUTING.md)
 
 
-Welcome to the airnow-dashboard repository! This repository hosts Docker Compose files for setting up and running the AirNow Dashboard system. The AirNow Dashboard provides visualizations and analytics for air quality data collected from various sources.
+Welcome to the `airnow-dashboard/docker-compose` repository! This repository hosts Docker Compose files for setting up and running the AirNow Dashboard system. The AirNow Dashboard provides basis for visualizations and analytics for air quality data collected from [AirNow Department of State](https://www.airnow.gov/international/us-embassies-and-consulates/).
+
 
 ## Features
-Visualization of air quality data
-Historical data analysis
-Customizable dashboards
-Integration with external APIs
+- Speedy Historical/Current data collection (`airnow-scraper` + `piper`)
+- Scheduled current data collection every (Apache Airflow)
+- Widely supported database for connection to external services (PostgreSQL)
 
 ## Prerequisites
 Before using the AirNow Dashboard system, make sure you have the following prerequisites installed on your system:
