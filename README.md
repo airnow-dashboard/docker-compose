@@ -47,11 +47,11 @@ Modify the `docker-compose.yml` file if needed.
 
 5. Start the AirNow Dashboard system:
 ```bash
-docker-compose up
+docker compose up
 ```
 Or, if you want it to start detached (i.e. running in the background):
 ```bash
-docker-compose up -d
+docker compose up --detach
 ```
 This command will download the necessary Docker images and start the containers.
 
