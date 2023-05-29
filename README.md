@@ -32,7 +32,7 @@ git clone https://github.com/airnow-dashboard/docker-compose.git
 
 2. Change to the cloned directory:
 ```bash
-cd airnow-dashboard
+cd docker-compose
 ```
 
 3. Customize the configuration:
