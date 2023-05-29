@@ -13,7 +13,7 @@ from docker.types import Mount
 output_target = "/app/output"
 
 piper_env_vars = {
-    "AIRNOW_DB_HOST": "postgres-airnow",
+    "AIRNOW_DB_HOST": "localhost",
     "AIRNOW_DB_NAME": "airnow",
     "AIRNOW_DB_USER": "airnow_admin",
     "AIRNOW_DB_PASSWORD": "ClwroyfOolkmotaAUJsv0nd0r5elWfHtRof7C3lYdzwr1FjmxzsrBGy",
@@ -80,7 +80,7 @@ with DAG(
         auto_remove="force",
         mounts=[shared_volume],
         command=[output_target, "historical"],
-        network_mode="bridge",
+        network_mode="host",
         environment=piper_env_vars
     )
 
