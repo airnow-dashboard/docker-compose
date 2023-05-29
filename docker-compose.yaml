@@ -74,7 +74,7 @@ services:
       - 5432:5432
     environment:
       POSTGRES_USER: airnow_admin
-      POSTGRES_PASSWORD: ClwroyfOolkmotaAUJsv0nd0r5elWfHtRof7C3lYdzwr1FjmxzsrBGyASQvzXa0FFwqVQsvr35aDTou7XXxYpyzvibWBkLrpeiIC
+      POSTGRES_PASSWORD: ClwroyfOolkmotaAUJsv0nd0r5elWfHtRof7C3lYdzwr1FjmxzsrBGy
       POSTGRES_DB: airnow
     volumes:
       - postgres-airnow-db-volume:/var/lib/postgresql/data
@@ -84,6 +84,7 @@ services:
       interval: 5s
       retries: 5
     restart: always
+
   postgres:
     image: postgres:13
     environment:
