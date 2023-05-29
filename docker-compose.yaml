@@ -70,6 +70,8 @@ x-airflow-common:
 services:
   postgres-airnow:
     image: postgres:13
+    ports:
+      - 5432:5432
     environment:
       POSTGRES_USER: airnow_admin
       POSTGRES_PASSWORD: ClwroyfOolkmotaAUJsv0nd0r5elWfHtRof7C3lYdzwr1FjmxzsrBGyASQvzXa0FFwqVQsvr35aDTou7XXxYpyzvibWBkLrpeiIC
@@ -77,7 +79,7 @@ services:
     volumes:
       - postgres-airnow-db-volume:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD", "pg_isready", "-U", "airnow"]
+      test: ["CMD", "pg_isready", "-U", "airnow_admin"]
       interval: 5s
       retries: 5
     restart: always
