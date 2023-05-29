@@ -47,6 +47,8 @@ with DAG(
 ) as dag:
 
     scraper = DockerOperator(
+        api_version='1.30',
+        docker_url='tcp://docker-socket-proxy:2375',
         task_id="scrape_data",
         image="ghcr.io/airnow-dashboard/airnow-scraper:latest",
         auto_remove="force",
@@ -71,6 +73,8 @@ with DAG(
     """  # otherwise, type it like this
 
     piper = DockerOperator(
+        api_version='1.30',
+        docker_url='tcp://docker-socket-proxy:2375',
         task_id="piper",
         image="ghcr.io/airnow-dashboard/piper:latest",
         auto_remove="force",
