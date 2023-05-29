@@ -157,3 +157,4 @@ services:
 volumes:
   postgres-db-volume:
   postgres-airnow-db-volume:
+  airnow-data-volume:
