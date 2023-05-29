@@ -60,8 +60,7 @@ x-airflow-common:
     - ./dags:/opt/airflow/dags
     - ./logs:/opt/airflow/logs
     - ./plugins:/opt/airflow/plugins
-  user: "${AIRFLOW_UID:-0}:${AIRFLOW_GID:-0}"
-  # user: "${AIRFLOW_UID:-50000}:${AIRFLOW_GID:-50000}"
+  user: "${AIRFLOW_UID:-50000}:${AIRFLOW_GID:-50000}"
   depends_on:
     redis:
       condition: service_healthy
@@ -132,6 +131,10 @@ services:
       timeout: 10s
       retries: 5
     restart: always
+
+  init-init:
+    image: bash
+    command: ["mkdir", "logs", "plugins", "&&", "chmod", "a+x", "logs", "plugins", "dags"]
 
   airflow-init:
     <<: *airflow-common
