@@ -2,7 +2,7 @@
 
 -- CREATE USER airnow_admin WITH PASSWORD 'ClwroyfOolkmotaAUJsv0nd0r5elWfHtRof7C3lYdzwr1FjmxzsrBGyASQvzXa0FFwqVQsvr35aDTou7XXxYpyzvibWBkLrpeiIC';
 -- CREATE DATABASE airnow;
-CREATE TABLE [IF NOT EXISTS] pm25_measurements (
+CREATE TABLE IF NOT EXISTS pm25_measurements (
     datetime timestamp not null
     location varchar(100) not null
     aqi numeric null
@@ -11,7 +11,7 @@ CREATE TABLE [IF NOT EXISTS] pm25_measurements (
     PRIMARY KEY(datetime, location)
 );
 
-CREATE TABLE [IF NOT EXISTS] cities (
+CREATE TABLE IF NOT EXISTS cities (
     location varchar(100) not null
     latitude numeric null
     longitude numeric null
