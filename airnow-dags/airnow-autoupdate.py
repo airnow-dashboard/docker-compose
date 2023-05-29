@@ -21,7 +21,7 @@ piper_env_vars = {
 
 shared_volume = Mount(
     target=output_target,
-    source="/var/lib/airnow",
+    source="./airnow-data",
     type="bind",
     read_only=False
 )
