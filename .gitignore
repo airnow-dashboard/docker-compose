@@ -1,5 +1,4 @@
 .idea/
+__pycache__/
 logs/**
 plugins/**
-!logs/README.md
-!plugins/README.md
