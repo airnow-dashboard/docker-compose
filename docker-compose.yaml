@@ -134,11 +134,15 @@ services:
 
   init-init:
     image: bash
-    command: ["mkdir", "logs", "plugins", "&&", "chmod", "a+x", "logs", "plugins", "dags"]
+    command: >
+      bash -c "mkdir ./logs ./plugins
+      && chmod a+x ./dags ./logs ./plugins"
 
   airflow-init:
     <<: *airflow-common
     command: version
+    depends_on:
+      - "init-init"
     environment:
       <<: *airflow-common-env
       _AIRFLOW_DB_UPGRADE: 'true'
